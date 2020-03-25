@@ -1,0 +1,46 @@
+.nav
+    +media-up(md)
+        //background: transparent
+    &__brand
+        position: relative
+        top: -7px
+        &__slogan
+            position: absolute
+            width: 100%
+            color: $primary-color
+            font-size: 12px
+            display: block
+            top: 22px
+            left: 0
+            right: 0
+            text-align: center
+            letter-spacing: 4px
+            pointer-events: none
+
+
+    &__links
+        +media-custom('min', $navigation__breakpoint)
+            font-weight: bolder
+            background-color: $primary-color
+            transform: skew(-25deg)
+            border-radius: 5px
+            overflow: hidden
+            +gradient($shadow: false)
+
+        &__item
+            transition: all 0.15s ease
+            +media-custom('min', $navigation__breakpoint)
+                padding: 0 15px
+                background: linear-gradient(90deg,rgba(0,0,0,.4),transparent 30%)
+                display: block
+                float: left
+                text-shadow: rgba(0,0,0,.75) 0 3px 3px
+                &:hover,
+                &--active
+                    text-shadow: none
+                    background: #fff
+                    display: block
+
+                & a
+                    transition: all 0.15s ease
+                    transform: skew(25deg)

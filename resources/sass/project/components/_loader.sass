@@ -1,0 +1,64 @@
+
+
+.is-loading
+    position: relative
+    overflow: hidden
+
+.preloader
+    position: absolute
+    width: 140%
+    height: 100%
+    height: 100vh
+    z-index: 10007
+    top: 0
+    left: -20%
+    background-color: $dark-color
+    +gradient($dark-color, darken($dark-color, 10%), false)
+    color: #ffffff
+
+    &:nth-child(even)
+        +gradient($shadow: false)
+
+    @for $i from 1 through 6
+        &:nth-child(#{$i})
+            z-index: 10005 - $i
+
+    & .txt
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+    &  .txt-perc
+        font-size: 35px
+        opacity: 1
+        margin: 0 0 6px 0
+        max-width: 400px
+        text-align: center
+
+    &  .progress
+        width: 100px
+        height: 3px
+        background-color: rgba(255, 255, 255, 0.2)
+        margin: 25px auto 15px auto
+
+    &  .progress span
+        display: block
+        width: 0
+        height: 100%
+        background-color: $primary-color
+
+    &.is-hidden
+        visibility: hidden
+        opacity: 0
+.svg__loader
+    width: 100px
+    height: 100px
+    display: block
+    transform: rotate(-90deg)
+    circle
+        fill: none
+        stroke-width: 6
+        stroke: $mute-color
+        &:last-child
+            stroke: $primary-color

@@ -1,0 +1,30 @@
+
+.hero
+    position: relative
+    min-height: 768px
+    min-height: 100vh
+    background: $dark-color
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+
+    &__svg
+        max-width: 75%
+        fill: #fff
+        z-index: 3
+        filter: drop-shadow(rgba(black, 1) 0 3px 10px)
+        +media-up(md)
+            max-width: 50%
+
+
+    &--image
+        opacity: 0.25
+
+    &__wood
+        position: absolute
+        z-index: 4
+        bottom: 0
+        left: 0
+        right: 0
+        width: 100%

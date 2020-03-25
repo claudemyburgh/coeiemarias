@@ -1,0 +1,59 @@
+
+
+.gallery
+    &__perspective
+        perspective: 600px
+
+    &__card
+        position: relative
+        background: #fff
+        padding: 15px
+        +radius(5px)
+        box-shadow: rgba($dark-color, 0.5) 10px 10px 60px -30px
+        display: none
+        +media-up(md)
+            display: block
+            transform: rotateX(12deg) rotateZ(12deg)  translateX(-50%)
+            width: 500px
+            position: absolute
+            left: 50%
+            top: -100px
+
+        &--alt
+            transform: rotateX(12deg) rotateZ(-12deg)  translateX(-50%)
+
+        &::after
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 80%
+            content: ''
+            background: linear-gradient(to bottom left, rgba(#fff, 0.64) 0%,  rgba(#fff, 0.64) 50%, transparent 55%)
+
+        &__img
+            display: block
+            width: 100%
+            max-width: 100%
+
+        &__footer
+            width: 100%
+            display: block
+            text-align: center
+            background: #fff
+            padding: 10px
+            margin-top: 15px
+            line-height: 40px
+            box-shadow: darken(#fff, 2%) 1px 1px 1px, darken(#fff, 2%) -1px -1px 1px
+            font-family: $alt-font
+            font-size: 20px
+            font-weight: 100
+            color: $dark-color
+
+
+    &--skew
+        +media-up(md)
+            transform: skewY(-5deg)
+    &--skew-alt
+        +media-up(md)
+            transform: skewY(5deg)

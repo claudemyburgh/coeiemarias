@@ -1,0 +1,48 @@
+
+.swiper-container
+    // position: relative
+    // display: block
+    background: #fff
+    width: 100%
+    height: auto
+    padding: 15px
+    +radius
+    border: solid 1px $mute-border-color
+    &::before,
+    &::after
+        position: absolute
+        height: 100%
+        width: 150px
+        display: block
+        content: ''
+
+        z-index: 2
+        pointer-events: none
+
+    &::before
+        left: 0
+        top: 0
+        background: linear-gradient(to right, white, transparent)
+    &::after
+        right: 0
+        top: 0
+        background: linear-gradient(to left, white, transparent)
+
+
+    // &-slide
+
+
+    &-img
+        +radius
+        display: block
+
+
+    &-button-prev,
+    &-button-next
+        color: $primary-color
+
+    &-pagination-bullet-active
+        background: $primary-color
+
+.swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+    bottom: -10px

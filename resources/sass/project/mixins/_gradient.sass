@@ -1,0 +1,13 @@
+
+=shadow($col1: $primary-color, $col2: #FF9800)
+    box-shadow: 0 12px 12px 0 rgba($col1, 0.4), 0 6px 6px 0 rgba($dark-color, 0.24)
+
+
+=gradient($col1: $primary-color, $col2: #FF9800, $shadow: true)
+    background-image: linear-gradient(117deg, $col1, $col2)
+    transition: background 0.25s ease
+    @if $shadow == true
+        +shadow($col1, $col2)
+
+    &:hover
+        background-image: linear-gradient(-117deg, $col1, $col2)

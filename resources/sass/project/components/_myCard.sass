@@ -1,0 +1,41 @@
+
+.sticky
+    +media-up(md)
+        position: sticky
+        top: 100px
+
+.myCard
+    position: relative
+    +radius
+    background: #fff
+    border: solid 1px darken(#fff, 2%)
+    padding: 15px
+    overflow: hidden
+    +shadow($dark-color, $secondary-color)
+    transition: all 0.25s ease
+
+    &::after
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        height: 100%
+        content: ''
+        +gradient($shadow: false)
+        z-index: 0
+        transition: all 0.25s ease
+
+    &__header,
+    &__body,
+    &__footer
+        position: relative
+        z-index: 1
+
+    &__header
+        font-size: 18px
+
+    &:hover
+        color: #fff
+
+        &::after
+            transform: translateY(-100%)

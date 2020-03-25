@@ -1,0 +1,51 @@
+
+
+.line-verticel
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 30px
+    width: 100%
+    color: $primary-color
+    +media-up(md)
+        height: 100%
+        width: 50px
+        flex-direction: column
+
+    &::before,
+    &::after
+        content: ''
+        height: 2px
+        width: 100%
+        display: block
+        background: $dark-color
+        +gradient
+        +radius(2px)
+        +media-up(md)
+            height: 100%
+            width: 2%
+
+    &::before
+        +media-down(md)
+            margin-right: 10px
+        +media-up(md)
+            margin-bottom: 10px
+
+    &::after
+        +media-down(md)
+            margin-left: 10px
+        +media-up(md)
+            margin-top: 10px
+
+    &--social
+        color: #fff !important
+        text-align: center
+        line-height: 40px
+        display: block
+        +radius(20px)
+        width: 40px
+        height: 40px
+        flex: 1
+        margin: 5px
+        +gradient

@@ -1,0 +1,63 @@
+
+*
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+
+$alt-font: 'Chewy', cursive
+
+body:not(.body-welcome)
+    padding-top: $navigation__height
+
+
+.section
+    padding: 100px 0
+
+:root
+    --custom-color: $primary-color
+
+
+.cta--button
+    position: relative
+    padding: 20px 29px !important
+    font-weight: 700
+    font-stretch: normal
+    line-height: 0.88
+    letter-spacing: 0.4px
+    color: #fff !important
+    width: 170px
+    height: 55px
+    border-radius: 6px
+    cursor: pointer
+    +gradient
+    +radius
+    transition: all 0.25s ease
+
+    &:hover
+        transform: translateY(-5px)
+        text-decoration: none
+        color: #fff
+        // transform: scale(1.05)
+
+.flex
+    +media-up(md)
+        display: flex
+
+    &--column
+        @extend .flex
+        flex-direction: column
+
+    &--row
+        @extend .flex
+        flex-direction: row
+
+
+.margin
+    margin-top: 80px
+    margin-bottom: 80px
+
+@supports(position: sticky)
+    +media-up(md)
+        .sticky
+            position: sticky
+            top: 100px

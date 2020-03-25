@@ -1,0 +1,132 @@
+
+
+.heading
+    position: relative
+    +media-up(md)
+        font-size: 4.2em
+        line-height: 1.09
+
+    &::after
+        +media-up(md)
+            position: absolute
+            content: attr(data-text)
+            font-size: 280px
+            color: $dark-color
+            top: 24px
+            left: 30px
+            opacity: 0.1
+            transform: translate(-100px, -100px)
+            z-index: 0
+            text-shadow: $primary-color 10px 10px 0
+            width: 300%
+
+    &::before
+        position: absolute
+        content: ''
+        height: 100%
+        width: 80%
+        left: 24px
+        top: 30px
+        +gradient
+        z-index: -1
+        +radius(5px 50px)
+        +media-up(md)
+            width: 100%
+            height: 125%
+            +radius(10px 100px)
+
+
+    & .tab
+        +media-up(md)
+            display: inline-block
+            width: 70px
+            height: 10px
+
+
+.heading--small
+    position: relative
+    +media-up(md)
+        font-size: 3.2em
+        line-height: 1.09
+
+    &::after
+         +media-up(md)
+            position: absolute
+            content: attr(data-text)
+            font-size: 180px
+            color: $dark-color
+            top: 0%
+            left: 0%
+            opacity: 0.1
+            transform: translate(-100px, -100px)
+            z-index: 0
+            text-shadow: $secondary-color 10px 10px 0
+            width: 300%
+
+    &::before
+        position: absolute
+        content: ''
+        height: 100%
+        width: 80%
+        left: 24px
+        top: 24px
+        +gradient
+        z-index: -1
+        +radius(3px 15px)
+        +media-up(md)
+            width: 100%
+            height: 120%
+            +radius(5px 50px)
+
+
+    & .tab
+        +media-up(md)
+            display: inline-block
+            width: 45px
+            height: 10px
+
+
+@keyframes linehover
+    0%, 100%
+        width: 50px
+
+    50%
+        width: 100px
+
+.columns
+    +media-up(md)
+        column-count: 2
+        column-gap: 30px
+
+.leadline
+    position: relative
+    display: block
+    width: 100%
+    margin-bottom: 60px !important
+    &::before,
+    &::after
+        position: absolute
+        content: ''
+        height: 3px
+        width: 50px
+        display: block
+        +radius
+        bottom: -36px
+        margin: 15px 0
+        +gradient($shadow: false)
+
+    &::before
+        background: rgba($dark-color, 0.05)
+        width: 75%
+
+    &::after
+        animation: linehover 7s ease infinite
+
+    &:nth-child(odd)
+        &::after
+            animation: linehover 10s ease infinite
+
+
+    // &:hover
+    //     &:after
+    //         animation: linehover 1s ease normal
