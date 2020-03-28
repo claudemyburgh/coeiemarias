@@ -18,5 +18,5 @@ Route::get('services', 'PagesController@services')->name('services');
 Route::get('contact', 'PagesController@contact')->name('contact');
 Route::post('contact', 'SendMailController@send')->name('send');
 
-Auth::routes(['verify' => true, 'register' => false]]);
+Auth::routes(['verify' => true, 'register' => false]);
 
