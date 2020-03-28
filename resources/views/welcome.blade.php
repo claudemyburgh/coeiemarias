@@ -71,7 +71,7 @@
                     Feel free to contact us.
                 </p>
                 <p>
-                    <a href="#" class="cta--button trigger--element">CONTACT US</a>
+                    <a href="{{ route('contact') }}" class="cta--button trigger--element">CONTACT US</a>
                 </p>
             </div>
         </div>
