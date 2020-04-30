@@ -16,7 +16,7 @@
         "fslightbox": "^3.0.9",
         "imagemin-mozjpeg": "^7.x",
         "imagemin-webpack-plugin": "^2.x",
-        "jquery": "^3.2",
+        "jquery": "^3.5",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.13",
         "luna-sass": "1.x",
