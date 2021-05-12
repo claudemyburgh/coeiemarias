@@ -32,7 +32,7 @@
         "hover-effect": "^1.1.0",
         "imagesloaded": "^4.1.4",
         "scrollmagic": "^2.0.7",
-        "swiper": "^5.2.1",
+        "swiper": "^6.5.1",
         "three": "^0.110.0"
     }
 }
